@@ -10,7 +10,6 @@
     <!-- Fonte do Google - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="João Pedro ">
@@ -18,6 +17,9 @@
                                          Conheça meus projetos e entre em contato.">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+    <!-- Css PAGINA PRINCIPAL -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="/assets/js/theme.js"></script>
 </head>
 
 <body>
@@ -36,24 +38,25 @@
                     <li><a href="#contact">Contatos</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle" aria-label="Alternar modo escuro/claro">🌙</button>
         </div>
     </header>
 
     <!-- seção do Main -->
 
-    <main>
-        <section id="sucess">
-            <div class="swiper projects-swiper ">
-                <div class="swiper-wrapper">
-                    <div class="img-sucess">
-                        <img src="./assets/img/success.svg" alt="sucesso">
-                    </div>
-                    <h3>Email enviado com sucesso</h3>
-                    <p>Obrigado por entrar em contato</p>
-                    <p>Logo mais retornarei a sua mensagem </p>
-                    <button><a href="index.html"></a>Voltar para o Inicio</button>
+<main>
+        <section class="section-container hero-container success-section">
+            <article class="hero-content success-content">
+                <figure class="hero-image success-icon">
+                    <img src="./assets/img/success.svg" alt="Email enviado com sucesso" class="float-animation success-img">
+                </figure>
+                <h1 class="success-title">Email enviado com sucesso!</h1>
+                <p class="success-subtitle">Obrigado por entrar em contato</p>
+                <p class="success-message">Logo mais retornarei a sua mensagem</p>
+                <div class="buttons-container">
+                    <a href="index.html" class="botao">Voltar para o Início</a>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 

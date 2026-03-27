@@ -9,18 +9,18 @@
     outline: none;
 }
 :root {
-    /* Paleta de Cores - Purple */
-    --purple-50: #f4eaff;
-    --purple-100: #e9dcfa;
-    --purple-200: #cdb3f0;
-    --purple-300: #b186e5;
-    --purple-400: #9460db;
-    --purple-500: #6b36c8;
-    --purple-600: #5b2ca0;
-    --purple-700: #4c2177;
-    --purple-800: #441f88;
-    --purple-900: #2a0e4d;
-    --purple-950: #1a0730;
+/* Paleta de Cores - Tech Blue */
+--blue-50: #e3f2fd; 
+--blue-100: #bbdefb; 
+--blue-200: #90caf9; 
+--blue-300: #64b5f6; 
+--blue-400: #42a5f5; 
+--blue-500: #2196f3; 
+--blue-600: #1976d2; 
+--blue-700: #1565c0; 
+--blue-800: #0d47a1; 
+--blue-900: #003087; 
+--blue-950: #000f4d; 
  
     /* Cores Neutras */
     --gray-200: #e8e8e8;
@@ -73,9 +73,9 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--white);
+    background: linear-gradient(135deg, var(--blue-950) 0%, #0a192f 50%, var(--blue-900) 100%); 
     line-height: 1.6;
-    color: var(--black);
+    color: var(--white); 
 }
 main{
     flex:1
@@ -111,9 +111,10 @@ main{
     color: var(--white);
 }
 .botao:hover{
-    border-color: var(--purple-800);
-    background-color: var(--purple-800);
-    box-shadow:var(--shadow-md) ;
+    border-color: var(--blue-800);
+    background-color: var(--blue-800);
+    color: var(--white);
+    box-shadow: none; /* Remove shadow on project GitHub buttons */
     transform: translateY(-0.25rem);
 }
 
@@ -146,20 +147,20 @@ header{
     z-index: 1000;/* efeito do menu em cima da pagina */
     width: 100%;
     height: 5rem;
-    border-bottom: var(--spacing-xs) solid var(--gray-200);
-    box-shadow: var(--shadow-sm);
-    background-color: var(--purple-800);
+    border-bottom: var(--spacing-xs) solid rgba(255,255,255,0.2); 
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.3); 
+    background-color: var(--blue-800); 
 }
 
 header a {
     font-weight: 600;
-    color: var(--white);
+    color: var(--blue-100); 
     transition: color 0.3s ease;
 }
 
 
 header a:hover {
-    color: var(--purple-100);
+    color: var(--blue-200);
 }
 
 #titulo{
@@ -217,7 +218,7 @@ header a:hover {
 .about-container article p,
 .contact-info p {
     font-size: var(--text-lg);
-    color: var(--gray-400);
+    color: var(--blue-100);
 }
  
 .hero-image{
@@ -322,7 +323,7 @@ header a:hover {
     
     font-size: var(--text-base);
     text-align: center;
-    color: var(--gray-400);
+    color: var(--blue-200); 
 }
 .project-container{
     scroll-margin-top: 3rem;
@@ -387,12 +388,13 @@ header a:hover {
     margin-bottom: 0.75rem;
     font-size: var(--text-lg);
     font-weight: 700;
+color: var(--blue-700); 
 }
 
 .project-content p{
     margin-bottom: var((--spacing-sm));
     font-size: var(--text-base);
-    color: var(--gray-400);
+color: var(--blue-400); 
     
 }
 .project-tags{
@@ -404,19 +406,23 @@ header a:hover {
 .tag{
     padding: 0.375rem 0.75rem ;
     border-radius: var(--radius-sm);
-    background-color: var(--purple-100);
+    background-color: var(--blue-900);
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--purple-800);
-
+    color: var(--blue-200);
 
 }
 .project-buttons{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     gap: 0.75rem;
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    width: 100%;
+    background-color: var(--blue-900);
+    box-shadow: none;
+    border-radius: var(--radius-md);
 }
 /* Configuração do Swiper */
 .swiper-wrapper {
@@ -499,7 +505,7 @@ header a:hover {
 
 .social-icon img{
     width: 100%;
-    filter: brightness(0) saturate(100%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(52%) saturate(3800%) hue-rotate(195deg) brightness(95%) contrast(105%);
     transition: filter 0.3s ease;
  
 }
@@ -507,12 +513,12 @@ header a:hover {
 .social-icon img:hover{
     filter: brightness(0) 
             saturate(100%) 
-            invert(42%) 
-            sepia(93%) 
-            saturate(1352%) 
-            hue-rotate(243deg) 
-            brightness(79%) 
-            contrast(91%);
+            invert(59%) 
+            sepia(24%) 
+            saturate(4776%) 
+            hue-rotate(200deg) 
+            brightness(98%) 
+            contrast(108%);
 }
 
 /* /Formulário de Contato/ */

@@ -129,7 +129,7 @@ async function getProjectGitHub() {
                 : 'Projeto Desenvolvido no Github'// senao escreva isso
 
             const tags = repositorio.topics?.length > 0
-                ? repositorio.topics.slice(0, 3).map(topic => `<span class-"tags">${topic}</span>`).join('')//condição verdade
+                ? repositorio.topics.slice(0, 3).map(topic => `<span class="tag">${topic}</span>`).join('')//condição verdade
                 : `<span class="tag">${linguagem}</span>`;
 
             //botões de Açao
@@ -138,7 +138,7 @@ async function getProjectGitHub() {
                      <div class="project-buttons">
                          <a href="${repositorio.html_url}" target="_blank" class="botao botao-sm">GitHub</a>
                          ${repositorio.homepage ?//se existir
-                    `<a href="" target="_blank" class="botao-outline botao-sm">Deploy</a>`//escreva issp
+                    `<a href="${repositorio.homepage}" target="_blank" class="botao-outline botao-sm">Deploy</a>`//escreva issp
                     : ''}  
                     </div>
 
@@ -184,8 +184,7 @@ async function getProjectGitHub() {
 
 
 function iniciarSwiper() {
-    new Swiper('.projects-swiper', {
-        slidesPerView: 1,
+        new Swiper('.project-swiper', {
         slidesPerGroup: 3,
         spaceBetween: 24,
         centeredSlides: false,

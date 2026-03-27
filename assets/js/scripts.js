@@ -6,7 +6,10 @@ const swiperWrapper = document.querySelector('.swiper-wrapper')
 
 
 //Formulario
-const Formulario = document.querySelector('#formulario')
+const formulario = document.querySelector('#formulario');
+
+//Expressão regular de validação do email
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Função de preenchimento da Seção about
 async function getAboutGitHub() {
@@ -138,7 +141,7 @@ async function getProjectGitHub() {
                      <div class="project-buttons">
                          <a href="${repositorio.html_url}" target="_blank" class="botao botao-sm">GitHub</a>
                          ${repositorio.homepage ?//se existir
-                    `<a href="${repositorio.homepage}" target="_blank" class="botao-outline botao-sm">Deploy</a>`//escreva issp
+                    `<a href="${repositorio.homepage}" target="_blank" class="botao-outline botao-sm">Deploy</a>`//escreva isso
                     : ''}  
                     </div>
 
@@ -177,14 +180,14 @@ async function getProjectGitHub() {
 
         iniciarSwiper();
 
-    }catch(error){
+    } catch (error) {
         console.error('Erro ao buscar dados no GitHub', error)
     }
 }
 
 
 function iniciarSwiper() {
-        new Swiper('.project-swiper', {
+    new Swiper('.project-swiper', {
         slidesPerGroup: 3,
         spaceBetween: 24,
         centeredSlides: false,
@@ -197,15 +200,15 @@ function iniciarSwiper() {
                 spaceBetween: 40,
                 centeredSlides: false
             },
-            769: { 
+            769: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 40,
                 centeredSlides: false
             },
-            1025: { 
+            1025: {
                 slidesPerView: 3,
-                slidesPerGroup: 3, 
+                slidesPerGroup: 3,
                 spaceBetween: 54,
                 centeredSlides: false
             }
@@ -224,14 +227,83 @@ function iniciarSwiper() {
             pauseOnMouseEnter: true,
             disableOnInteraction: false,
         },
-        grabCursor: true, 
-        slidesOffsetBefore: 0, 
-        slidesOffsetAfter: 0, 
+        grabCursor: true,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
     });
 }
 
+//Processo de validação
+formulario.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+    document.querySelectorAll('form span').forEach(span => span.innerHTML = '');
+
+    let isValid = true;
 
 
+    const nome = document.querySelector('#nome');
+
+    const erroNome = document.querySelector('#erro-nome');
+
+    if (nome.value.trim().length < 3) {
+        erroNome.innerHTML = 'O nome deve ter no mínimo 3 caracteres'
+        if (isValid) nome.focus();
+        isValid = false;
+    }
+
+    const email = document.querySelector('#email');
+
+    const erroEmail = document.querySelector('#erro-email')
+
+
+
+    if (!email.value.trim().match(emailRegex)) {
+        erroEmail.innerHTML = 'Digite um endereço de e-mail válido';
+        if (isValid) email.focus();
+        isValid = false;
+    }
+
+
+    const assunto = document.querySelector('#assunto');
+
+    const erroAssunto = document.querySelector('#erro-assunto');
+
+
+
+    if (assunto.value.trim().length < 5) {
+        erroAssunto.innerHTML = 'Digite o Asunto deve ter no mínimo 5 caracteres';
+        if (isValid) assunto.focus();
+        isValid = false;
+    }
+
+    const mensagem = document.querySelector('#mensagem');
+
+    const erroMensagem = document.querySelector('#erro-mensagem')
+
+
+
+    if (mensagem.value.trim().length === 0) {
+        erroMensagem.innerHTML = 'A Mensagem não pode ser vazia!'
+        if (isValid) mensagem.focus();
+        isValid = false;
+    }
+
+    if (isValid) {
+        const submitButton = formulario.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        formulario.submit();
+    }
+
+
+
+
+
+
+})
 
 
 

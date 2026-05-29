@@ -6,17 +6,12 @@
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonte do Google - Poppins -->
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="João Pedro ">
-    <meta name="description" content="Portfólio do João Pedro, desenvolvedor Full Stack especializado em criar experiências digitais incríveis.
-                                         Conheça meus projetos e entre em contato.">
+    <meta name="author" content="João Pedro">
+    <meta name="description" content="João Pedro Oliveira — Desenvolvedor Full Stack especializado em NestJS, React e TypeScript. Conheça meus projetos reais e entre em contato.">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
 
@@ -25,20 +20,15 @@
 
     <!-- Css PAGINA PRINCIPAL -->
     <link rel="stylesheet" href="./assets/css/style.css">
-   
-    <title>Portifólio do João Pedro</title>
+
+    <title>João Pedro Oliveira | Desenvolvedor Full Stack</title>
 </head>
 
 <body>
     <!-- Cabeçalho da Pagina-->
     <header>
-
         <div class="menu-content">
-
-            <!-- titulo do cabeçalho-->
             <a href="index.html" id="titulo">Portifólio</a>
-
-            <!-- Menu de Navegação-->
             <nav>
                 <ul class="menu-list">
                     <li><a href="#hero">Inicio</a></li>
@@ -48,38 +38,54 @@
                     <li><a href="#contact">Contatos</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
-    <!-- Seção Principal da Pagina-->
     <main>
 
         <!--Seção hero -->
         <section id="hero" class="section-container hero-container">
-
-            <!--Boas Vindas -->
             <article class="hero-content">
                 <span>Olá, eu sou o João Pedro</span>
                 <h1>Desenvolvedor Full Stack</h1>
-                <p>Transformo Ideias em codigos e crio Experiencias digitais Incriveis</p>
+                <p>Construo produtos reais com código limpo, arquitetura sólida e foco em resolver problemas de verdade.</p>
                 <div class="button-container">
-                    <a href="#contact" class="botao">Entre em contato</a>
-                    <a href="#about" class="botao-outline">Saiba Mais...</a>
+                    <a href="#project" class="botao">Ver Projetos</a>
+                    <a href="#contact" class="botao-outline">Entre em contato</a>
                 </div>
             </article>
-
-            <!-- Imagem da Seção Hero -->
             <figure class="hero-image">
                 <img src="./assets/img/imagem1.png" alt="Foto do autor do Site" class="float-animation">
             </figure>
-
         </section>
 
 
         <!--Seção About -->
         <section id="about" class="section-container about-container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre mim</h2>
+                <p>
+                    Sou desenvolvedor Full Stack com foco em construir aplicações que resolvem problemas reais.
+                    Trabalho com <strong>TypeScript, NestJS, React e Supabase</strong> — do banco de dados até a interface do usuário.
+                </p>
+                <p>
+                    Já entreguei sistemas em produção para clientes reais: um CRM jurídico completo com integração
+                    WhatsApp, plataformas de agendamento para barbearia e salão de estética. Cada projeto com
+                    arquitetura limpa, documentação e boas práticas desde o início.
+                </p>
+                <p>
+                    Estou em busca da primeira oportunidade formal como dev — trazendo na bagagem projetos reais,
+                    código organizado e muita vontade de crescer dentro de um time.
+                </p>
 
+                <div class="about-badges">
+                    <span class="badge">🏛️ Clean Architecture</span>
+                    <span class="badge">🧪 Testes unitários</span>
+                    <span class="badge">📄 Documentação</span>
+                    <span class="badge">🔐 Segurança (JWT · RLS)</span>
+                    <span class="badge">🗂️ Git semântico</span>
+                </div>
+            </div>
         </section>
 
 
@@ -87,33 +93,90 @@
         <section id="project" class="section-container projects-container">
             <h2>Meus Projetos</h2>
 
-            <!-- Swiper Container -->
-            <div class="swiper project-swiper ">
+            <div class="swiper project-swiper">
                 <div class="swiper-wrapper">
 
+                    <!-- Projeto 1 — CRM Jurídico -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-icon">⚖️</span>
+                                <span class="project-tag">Produto real · Cliente ativo</span>
+                            </div>
+                            <h3>CRM Jurídico — Kelly Viana Advocacia</h3>
+                            <p>Sistema de gestão jurídica com Kanban dinâmico, chat WhatsApp ao vivo, portal externo do cliente e autenticação com RLS no Supabase.</p>
+                            <div class="project-stack">
+                                <span>JavaScript</span>
+                                <span>Supabase</span>
+                                <span>PostgreSQL</span>
+                                <span>WhatsApp API</span>
+                                <span>Edge Functions</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pedro-gomes2/escritorio_crm" target="_blank" class="botao-outline">📁 Repositório</a>
+                                <a href="https://escritorio-crm.vercel.app" target="_blank" class="botao">🌐 Demo ao vivo</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Projeto 2 — BarbShop -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-icon">💈</span>
+                                <span class="project-tag">Produto real · Em produção</span>
+                            </div>
+                            <h3>BarbShop — Sistema de Agendamento</h3>
+                            <p>Plataforma de agendamento online para barbearias com painel administrativo, gestão de horários por profissional e controle de disponibilidade.</p>
+                            <div class="project-stack">
+                                <span>TypeScript</span>
+                                <span>React</span>
+                                <span>Tailwind CSS</span>
+                                <span>Supabase</span>
+                                <span>Prisma</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pedro-gomes2/barbearia-do-cardoso" target="_blank" class="botao-outline">📁 Repositório</a>
+                                <a href="https://agendamento-barbshop.vercel.app" target="_blank" class="botao">🌐 Demo ao vivo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 — Alves Estética -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <span class="project-icon">💇‍♀️</span>
+                                <span class="project-tag">Produto real · Em produção</span>
+                            </div>
+                            <h3>Alves Estética — Portal de Agendamento</h3>
+                            <p>Portal de agendamento para salão de estética com painel administrativo, controle financeiro, gestão de profissionais e confirmação via WhatsApp.</p>
+                            <div class="project-stack">
+                                <span>TypeScript</span>
+                                <span>React</span>
+                                <span>Supabase</span>
+                                <span>JWT</span>
+                                <span>Vercel Serverless</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pedro-gomes2/Alves_Salao" target="_blank" class="botao-outline">📁 Repositório</a>
+                                <a href="https://alves-salao.vercel.app" target="_blank" class="botao">🌐 Demo ao vivo</a>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <!-- botões de navegação -->
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-
-                <!-- Paginação -->
                 <div class="swiper-pagination"></div>
             </div>
-
-
-
-
-
-
         </section>
 
 
         <!-- seção de habilidades -->
         <section id="skills" class="section-container skills">
             <h2 class="section-title">Habilidades</h2>
-            
             <div class="skills-grid">
                 <div class="skill-card">
                     <img src="./assets/icons/social/javascript.svg" alt="JavaScript icon" class="skill-icon">
@@ -151,71 +214,52 @@
         </section>
 
 
-
-
         <!-- Seção contact-->
         <section id="contact" class="section-container contact-container">
-            <!--Redes sociais-->
             <article class="contact-info">
                 <h2>Entre em contato</h2>
-                <p>Sinta-se a vontade para entrar em contato comigo!</p>
-
-                <!-- Links para as Redes Sociais-->
+                <p>Sinta-se à vontade para entrar em contato comigo!</p>
                 <div class="social-container">
-                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-oliveira-95b003255/" target="_blank"
-                        class="social-icon" aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-oliveira-95b003255/" target="_blank" class="social-icon" aria-label="Linkedin">
                         <img src="./assets/icons/social/linkedin.svg" alt="Link para o LinkedIn" />
                     </a>
                     <a href="https://github.com/Pedro-gomes2" target="_blank" class="social-icon" aria-label="GitHub">
                         <img src="./assets/icons/social/github.svg" alt="Link para o GitHub" />
                     </a>
-
-                    <a href="https://www.instagram.com/gomes.pedro2?igsh=MXRtdnJydW9vZW0weg==" target="_blank"
-                        class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/gomes.pedro2?igsh=MXRtdnJydW9vZW0weg==" target="_blank" class="social-icon" aria-label="Instagram">
                         <img src="./assets/icons/social/instagram.svg" alt="Link para o Instagram" />
                     </a>
                 </div>
             </article>
 
             <form id="formulario" action="https://formsubmit.co/ff7023be76433eb72077d89f22022252" method="POST">
-                <input type="hidden" name="_next" value="http://localhost:5500/success.html">
+                <input type="hidden" name="_next" value="https://pedro-gomes2.github.io/Portifolio/">
                 <input type="hidden" name="_captcha" value="false">
                 <label for="nome">Nome</label>
                 <input id="nome" name="nome" type="text" placeholder="Digite o seu nome completo:" />
                 <span id="erro-nome"></span>
-
                 <label for="email">E-mail</label>
                 <input id="email" name="email" type="text" placeholder="Digite o seu email:" />
                 <span id="erro-email"></span>
-
                 <label for="assunto">Assunto</label>
                 <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto da mensagem:" />
                 <span id="erro-assunto"></span>
-
                 <label for="mensagem">Mensagem</label>
                 <input id="mensagem" name="mensagem" placeholder="Digite a sua mensagem:" />
                 <span id="erro-mensagem"></span>
-
                 <button class="botao" type="submit">Enviar Mensagem</button>
             </form>
         </section>
 
-
     </main>
 
-
-
-    <!-- Rodapé da Pagina-->
     <footer>
         Desenvolvido por João Pedro
     </footer>
-    <!-- SWIPER JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Script JavaScript principal da pagina -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
 
 </body>
-
 
 </html>
